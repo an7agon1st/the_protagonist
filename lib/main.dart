@@ -54,13 +54,13 @@ class MyHomePage extends StatelessWidget {
                 children: <Widget>[
                   Container(
                       //height: screenHeight,
-                      // child: Image.asset(
-                      //   'toolbar_img_bw.jpg',
-                      //   //height: screenHeight,
-                      //   width: screenWidth,
-                      //   //colorBlendMode: BlendMode.difference,
-                      //   fit: BoxFit.fitWidth,
-                      // ),
+                      child: Image.asset(
+                        'toolbar_img_bw.jpg',
+                        //height: screenHeight,
+                        width: screenWidth,
+                        //colorBlendMode: BlendMode.difference,
+                        fit: BoxFit.fitWidth,
+                      ),
                   ),
                 ],
               ),
