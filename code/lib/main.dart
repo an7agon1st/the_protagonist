@@ -94,7 +94,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             SliverFillRemaining(
-              child: ListView(
+              child: Column(
                 children: <Widget>[
                   Container(
                     color: Colors.orange[100],
