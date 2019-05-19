@@ -94,27 +94,25 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             SliverFillRemaining(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    color: Colors.orange[100],
-                    width: screenWidth,
-                    height: screenHeight,
-                    padding: EdgeInsets.symmetric(
-                        vertical: screenWidth * 0.2,
-                        horizontal: screenHeight * 0.2),
-                    child: Text('Page 1'),
-                  ),
-                  Container(
-                    color: Colors.red[100],
-                    width: screenWidth,
-                    height: screenHeight,
-                    padding: EdgeInsets.symmetric(
-                        vertical: screenWidth * 0.2,
-                        horizontal: screenHeight * 0.2),
-                    child: Text('Page 2'),
-                  ),
-                ],
+              child: Container(
+                color: Colors.orange[100],
+                width: screenWidth,
+                height: screenHeight,
+                padding: EdgeInsets.symmetric(
+                    vertical: screenWidth * 0.2,
+                    horizontal: screenHeight * 0.2),
+                child: Text('Page 1'),
+              ),
+            ),
+            SliverFillRemaining(
+              child: Container(
+                color: Colors.red[100],
+                width: screenWidth,
+                height: screenHeight,
+                padding: EdgeInsets.symmetric(
+                    vertical: screenWidth * 0.2,
+                    horizontal: screenHeight * 0.2),
+                child: Text('Page 2'),
               ),
             ),
           ],
