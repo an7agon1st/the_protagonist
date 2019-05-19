@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'The Protagonist',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.orange,
         textTheme: TextTheme(
           title: TextStyle(
             color: Colors.grey,
@@ -34,49 +34,68 @@ class MyHomePage extends StatelessWidget {
     screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            floating: false,
-            pinned: true,
-            snap: false,
-            elevation: 0.5,
-            expandedHeight: screenHeight,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                'The Protagonist',
-                style: TextStyle(
-                  color: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+            vertical: screenHeight * 0.03, horizontal: screenWidth * 0.06),
+        child: CustomScrollView(
+          slivers: <Widget>[
+            SliverAppBar(
+              floating: false,
+              pinned: true,
+              snap: false,
+              elevation: 0.5,
+              expandedHeight: screenHeight,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text(
+                  'The Protagonist',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              background: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  Container(
+                background: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Expanded(
                       //height: screenHeight,
                       child: Image.asset(
-                        'toolbar_img_bw.jpg',
+                        'toolbar.png',
                         //height: screenHeight,
                         width: screenWidth,
                         //colorBlendMode: BlendMode.difference,
-                        fit: BoxFit.fitWidth,
+                        fit: BoxFit.fitHeight,
                       ),
+                    ),
+                  ],
+                ),
+                centerTitle: true,
+              ),
+            ),
+            SliverFillRemaining(
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                    color: Colors.orange[100],
+                    width: screenWidth,
+                    height: screenHeight,
+                    padding: EdgeInsets.symmetric(
+                        vertical: screenWidth * 0.2,
+                        horizontal: screenHeight * 0.2),
+                    child: Text('Page 1'),
+                  ),
+                  Container(
+                    color: Colors.red[100],
+                    width: screenWidth,
+                    height: screenHeight,
+                    padding: EdgeInsets.symmetric(
+                        vertical: screenWidth * 0.2,
+                        horizontal: screenHeight * 0.2),
+                    child: Text('Page 2'),
                   ),
                 ],
               ),
-              centerTitle: true,
             ),
-          ),
-          SliverFillRemaining(
-            child: Column(
-              children: <Widget>[
-                Center(
-                  child: Text('Sample webpage'),
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
