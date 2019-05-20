@@ -36321,20 +36321,19 @@ F.yR.prototype={
 S:function(a){var u="Dollie Demo",t=null
 return new S.kZ(new F.yS(t),"The Protagonist",X.Jj(t,u,t,new Q.I(4294959282),R.D5(t,t,t,t,t,t,t,t,t,t,t,t,A.hW(t,t,C.j9,t,t,t,t,u,t,t,t,t,t,t,!0,t,t,t,t,t,t))),t)}}
 F.yS.prototype={
-S:function(a){var u,t,s,r,q,p,o,n,m=null,l=F.bC(a,!1).a.b,k=F.bC(a,!1).a.a,j=U.KX("background_img.jpg",C.a1,C.cU,l,k)
+S:function(a){var u,t,s,r,q,p,o,n=null,m=F.bC(a,!1).a.b,l=F.bC(a,!1).a.a,k=U.KX("background_img.jpg",C.a1,C.cU,m,l)
 if(typeof l!=="number")return l.p()
-u=l*0.03
-if(typeof k!=="number")return k.p()
-t=k*0.06
-s=[N.aA]
-r=H.i([O.J_(a,"Portfolio"),O.J_(a,"Projects"),O.J_(a,"Shop"),B.x8(m,L.KV(C.is),30,m,new V.ax(10,10,10,10),m)],s)
-q=L.pW("The Protagonist",A.hW(m,m,m,m,m,m,m,"Dollie Demo",m,14,m,m,m,m,!0,m,m,m,m,m,m))
-p=T.OX(H.i([new T.w4(1,C.c_,U.KX("toolbar.png",C.a1,C.cV,m,k),m)],s),C.c9,C.dH)
-o=C.dI.j(0,100)
-o=L.Lh(a,L.pW("Page 1",m),o)
-n=C.ca.j(0,100)
-n=H.i([new E.jd(r,new Z.nX(new T.fx(C.i9,q,m),p,!0,m),0.5,l,!1,!0,!1,m),new G.pK(new T.fx(C.ia,o,m),m),new G.pK(L.Lh(a,L.pW("Page 2",m),n),m)],s)
-return new M.j7(T.hM(C.ay,H.i([j,new T.fx(new V.ax(t,u,t,u),new B.vd(n,C.l,!1,m,!0,C.eD,!1,m,m,C.di,m),m)],s),C.aH),m)}}
+u=l*0.06
+if(typeof m!=="number")return m.p()
+t=[N.aA]
+s=H.i([O.J_(a,"Portfolio"),O.J_(a,"Projects"),O.J_(a,"Shop"),B.x8(n,L.KV(C.is),30,n,new V.ax(10,10,10,10),n)],t)
+r=L.pW("The Protagonist",A.hW(n,n,n,n,n,n,n,"Dollie Demo",n,14,n,n,n,n,!0,n,n,n,n,n,n))
+q=T.OX(H.i([new T.w4(1,C.c_,U.KX("toolbar.png",C.a1,C.cV,n,l),n)],t),C.c9,C.dH)
+p=C.dI.j(0,100)
+p=L.Lh(a,L.pW("Page 1",n),p)
+o=C.ca.j(0,100)
+o=H.i([new E.jd(s,new Z.nX(new T.fx(C.i9,r,n),q,!0,n),0.5,m,!1,!0,!1,n),new G.pK(new T.fx(C.ia,p,n),n),new G.pK(L.Lh(a,L.pW("Page 2",n),o),n)],t)
+return new M.j7(T.hM(C.ay,H.i([k,new T.fx(new V.ax(u,m*0.03,u,0),new B.vd(o,C.l,!1,n,!0,C.eD,!1,n,n,C.di,n),n)],t),C.aH),n)}}
 O.yT.prototype={}
 L.yU.prototype={
 gO:function(){return this.cx}}

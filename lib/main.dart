@@ -49,8 +49,10 @@ class MyHomePage extends StatelessWidget {
             fit: BoxFit.fill,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(
-                vertical: screenHeight * 0.03, horizontal: screenWidth * 0.06),
+            padding: EdgeInsets.only(
+                left: screenWidth * 0.06,
+                right: screenWidth * 0.06,
+                top: screenHeight * 0.03),
             child: CustomScrollView(
               slivers: <Widget>[
                 SliverAppBar(
