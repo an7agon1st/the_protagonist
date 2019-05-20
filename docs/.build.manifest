@@ -2,9 +2,8 @@
 assets/FontManifest.json
 assets/background_img.jpg
 assets/fonts/Dollie-Demo.ttf
+assets/toolbar.jpeg
 assets/toolbar.png
-assets/toolbar_img.jpg
-assets/toolbar_img_bw.jpg
 index.html
 main.dart.js
 packages/$sdk/_internal/ddc_sdk.sum
