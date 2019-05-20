@@ -1,4 +1,7 @@
 .packages
+assets/FontManifest.json
+assets/background_img.jpg
+assets/fonts/Dollie-Demo.ttf
 assets/toolbar.png
 assets/toolbar_img.jpg
 assets/toolbar_img_bw.jpg
