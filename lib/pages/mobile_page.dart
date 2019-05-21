@@ -92,7 +92,7 @@ class MobilePage extends StatelessWidget {
                             //height: screenHeight,
                             width: screenWidth,
                             //colorBlendMode: BlendMode.difference,
-                            fit: BoxFit.fitHeight,
+                            fit: BoxFit.fill,
                           ),
                         ),
                       ],
