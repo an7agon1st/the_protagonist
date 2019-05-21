@@ -75,12 +75,16 @@ class DesktopPage extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                           //height: screenHeight,
-                          child: Image.asset(
-                            'toolbar.jpeg',
-                            //height: screenHeight,
-                            width: screenWidth,
-                            //colorBlendMode: BlendMode.difference,
-                            fit: BoxFit.fill,
+                          child: Container(
+                            color: Color.fromRGBO(239, 239, 239, 1.0),
+                            child: Image.asset(
+                              'toolbar.jpeg',
+                              colorBlendMode: BlendMode.lighten,
+                              //height: screenHeight,
+                              width: screenWidth,
+                              //colorBlendMode: BlendMode.difference,
+                              fit: BoxFit.fitWidth,
+                            ),
                           ),
                         ),
                       ],
@@ -88,23 +92,167 @@ class DesktopPage extends StatelessWidget {
                     centerTitle: true,
                   ),
                 ),
-                SliverFillRemaining(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: MyPage(
-                      context,
-                      color: Colors.orange[100],
-                      child: Text('Page 1'),
-                    ),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Container(
+                          color: Colors.white,
+                          child: Column(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Center(
+                                  child: Image.asset(
+                                    'main_page.jpeg',
+                                    scale: 5.0,
+                                    //fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
+                                  'Shit About me\nMore Shit\n\nCause\nI\nDont\nShut\nUp\nlolol',
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                    childCount: 1,
                   ),
                 ),
-                SliverFillRemaining(
-                  child: MyPage(
-                    context,
-                    color: Colors.red[100],
-                    child: Text('Page 2'),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Container(
+                          width: screenWidth,
+                          height: screenHeight * 0.9,
+                          color: Colors.orange[50],
+                          child: Column(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Center(
+                                    child: Text(
+                                  'Portfolio',
+                                  style: TextStyle(
+                                    fontSize: 24.0,
+                                  ),
+                                )),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Art 5'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Art 5'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Art 5'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Art 5'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text('Art 5'),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Card(
+                                      child: Container(
+                                        height: 150.0,
+                                        width: 150.0,
+                                        child: InkWell(
+                                          onTap: () {},
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: <Widget>[
+                                              Text('More this way'),
+                                              Icon(Icons.arrow_right)
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                    childCount: 1,
                   ),
                 ),
+                // SliverFillRemaining(
+                //   child: MyPage(
+                //     context,
+                //     color: Colors.red[100],
+                //     child: Text('Page 2'),
+                //   ),
+                // ),
               ],
             ),
           ),

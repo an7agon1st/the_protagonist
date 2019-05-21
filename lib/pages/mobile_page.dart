@@ -17,36 +17,36 @@ class MobilePage extends StatelessWidget {
 
     return Scaffold(
       drawer: Drawer(
-              child: ListView(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8.0),
-                    child: AppBar(
-                      elevation: 0.5,
-                      automaticallyImplyLeading: false,
-                      title: Text(
-                        'The Protagonist',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                        ),
-                      ),
-                    ),
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: AppBar(
+                elevation: 0.5,
+                automaticallyImplyLeading: false,
+                title: Text(
+                  'The Protagonist',
+                  style: TextStyle(
+                    fontSize: 14.0,
                   ),
-                  MyDrawerElement(
-                    title: 'Portfolio',
-                    context: context,
-                  ),
-                  MyDrawerElement(
-                    title: 'Projects',
-                    context: context,
-                  ),
-                  MyDrawerElement(
-                    title: 'Shop',
-                    context: context,
-                  ),
-                ],
+                ),
               ),
             ),
+            MyDrawerElement(
+              title: 'Portfolio',
+              context: context,
+            ),
+            MyDrawerElement(
+              title: 'Projects',
+              context: context,
+            ),
+            MyDrawerElement(
+              title: 'Shop',
+              context: context,
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           Image.asset(
@@ -106,7 +106,11 @@ class MobilePage extends StatelessWidget {
                     child: MyPage(
                       context,
                       color: Colors.orange[100],
-                      child: Text('Page 1'),
+                      child: Row(
+                        children: <Widget>[
+                          Image.asset('main_page.jpeg'),
+                        ],
+                      ),
                     ),
                   ),
                 ),
