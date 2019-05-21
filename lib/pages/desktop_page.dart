@@ -224,9 +224,23 @@ class DesktopPage extends StatelessWidget {
                                         height: 150.0,
                                         width: 150.0,
                                         child: InkWell(
-                                          onTap: () {},
+                                          highlightColor: Colors.orangeAccent,
+                                          splashColor: Colors.orangeAccent[100],
+                                          onTap: () {
+                                            showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return SimpleDialog(
+                                                  children: <Widget>[
+                                                    Text('Pressed')
+                                                  ],
+                                                );
+                                              },
+                                            );
+                                          },
                                           child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text('More this way'),
                                               Icon(Icons.arrow_right)
