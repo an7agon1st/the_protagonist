@@ -1,15 +1,26 @@
 import 'package:flutter_web/material.dart';
 
 import '../widgets/myInkWell.dart';
-import '../widgets/myPages.dart';
+import '../widgets/portfolio_card.dart';
 //import '../widgets/myDrawerElements.dart';
 
 class DesktopPage extends StatelessWidget {
   final String title;
+  List<String> portfolioImages = [
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+    'main_page.jpeg',
+  ];
   DesktopPage({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print(portfolioImages.length);
     double screenHeight;
     double screenWidth;
     screenHeight = MediaQuery.of(context).size.height;
@@ -154,102 +165,78 @@ class DesktopPage extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text('Art 5'),
-                                          ),
-                                        ),
+                                    PortfolioCard(
+                                      size: screenHeight * 0.3,
+                                      context: context,
+                                      myChild: Image.asset(
+                                        portfolioImages[index],
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text('Art 5'),
-                                          ),
-                                        ),
+                                    PortfolioCard(
+                                      size: screenHeight * 0.3,
+                                      context: context,
+                                      myChild: Image.asset(
+                                        'background_img.jpg',
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text('Art 5'),
-                                          ),
-                                        ),
+                                    PortfolioCard(
+                                      size: screenHeight * 0.3,
+                                      context: context,
+                                      myChild: Image.asset(
+                                        'background_img.jpg',
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text('Art 5'),
-                                          ),
-                                        ),
+                                    PortfolioCard(
+                                      size: screenHeight * 0.3,
+                                      context: context,
+                                      myChild: Image.asset(
+                                        'background_img.jpg',
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text('Art 5'),
-                                          ),
-                                        ),
+                                    PortfolioCard(
+                                      size: screenHeight * 0.3,
+                                      context: context,
+                                      myChild: Image.asset(
+                                        'background_img.jpg',
+                                        fit: BoxFit.fill,
                                       ),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Card(
-                                        child: Container(
-                                          height: 150.0,
-                                          width: 150.0,
-                                          child: InkWell(
-                                            highlightColor: Colors.orangeAccent,
-                                            splashColor:
-                                                Colors.orangeAccent[100],
-                                            onTap: () {
-                                              showDialog(
-                                                context: context,
-                                                builder: (context) {
-                                                  return SimpleDialog(
-                                                    children: <Widget>[
-                                                      Text('Pressed')
-                                                    ],
-                                                  );
-                                                },
+                                    PortfolioCard(
+                                      size: screenHeight * 0.25,
+                                      pad: false,
+                                      myChild: InkWell(
+                                        highlightColor: Colors.orangeAccent,
+                                        splashColor: Colors.orangeAccent[100],
+                                        onTap: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return SimpleDialog(
+                                                children: <Widget>[
+                                                  Padding(
+                                                    padding: EdgeInsets.all(
+                                                        screenHeight * 0.1),
+                                                    child: Image.asset(
+                                                      'background_img.jpg',
+                                                      fit: BoxFit.fill,
+                                                    ),
+                                                  )
+                                                ],
                                               );
                                             },
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text('More this way'),
-                                                Icon(Icons.arrow_right)
-                                              ],
-                                            ),
-                                          ),
+                                          );
+                                        },
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Text('More this way'),
+                                            Icon(Icons.arrow_right)
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -264,6 +251,28 @@ class DesktopPage extends StatelessWidget {
                     childCount: 1,
                   ),
                 ),
+
+/* The KEY IS HERE SOMEWHERE TO REPEATED WIDGETS
+
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, int index) {
+                      return PortfolioCard(
+                        size: screenHeight * 0.3,
+                        context: context,
+                        myChild: Image.asset(
+                          portfolioImages[index],
+                          fit: BoxFit.fill,
+                        ),
+                      );
+                    },
+                    childCount: portfolioImages.length,
+                  ),
+                )
+
+                */
+
+
                 // SliverFillRemaining(
                 //   child: MyPage(
                 //     context,
