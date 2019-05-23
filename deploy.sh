@@ -1,4 +1,8 @@
 rm -rf docs
+echo building deployment
+sleep 1
+webdev build
+echo deployment built
 cp CNAME ./build/
 mv build docs
 echo deployment ready
