@@ -66,12 +66,19 @@ class MyPortfolio extends StatelessWidget {
                   ButtonBar(
                     children: <Widget>[
                       FlatButton(
+                        highlightColor: Colors.orange[100],
+                        splashColor: Colors.orange[100],
                         onPressed: () {},
-                        child: Row(
-                          children: <Widget>[
-                            Text('View More'),
-                            Icon(Icons.arrow_right,)
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: <Widget>[
+                              Text('View More'),
+                              Icon(
+                                Icons.arrow_right,
+                              )
+                            ],
+                          ),
                         ),
                       )
                     ],
