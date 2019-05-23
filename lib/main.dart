@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'The Protagonist',
       theme: ThemeData(
+        splashColor: Colors.orange[100],
+        highlightColor: Colors.orange[100],
         backgroundColor: Colors.orange[100],
         //scaffoldBackgroundColor: Colors.blue,
         fontFamily: 'Dollie Demo',

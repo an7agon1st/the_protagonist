@@ -44,7 +44,7 @@ class DesktopPage extends StatelessWidget {
               slivers: <Widget>[
                 new MySliverAppBar(
                     screenHeight: screenHeight, screenWidth: screenWidth),
-                new MyAboutMe(),
+                new MyAboutMe(screenHeight: screenHeight, screenWidth: screenWidth),
                 new MyPortfolio(
                     screenWidth: screenWidth,
                     screenHeight: screenHeight,
