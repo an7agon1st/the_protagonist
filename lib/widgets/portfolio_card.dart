@@ -8,10 +8,10 @@ class PortfolioCard extends Padding {
   PortfolioCard({this.myChild, this.context, this.size = 150, this.pad = true})
       : super(
           padding: const EdgeInsets.all(8.0),
-          child: Card(
-            child: Container(
-              height: size,
-              width: size,
+          child: Container(
+            height: size,
+            width: size,
+            child: Card(
               child: pad
                   ? Padding(
                       padding: const EdgeInsets.all(8.0),

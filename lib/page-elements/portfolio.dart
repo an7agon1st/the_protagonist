@@ -40,27 +40,30 @@ class MyPortfolio extends StatelessWidget {
                     )),
                   ),
                   Flexible(
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      shrinkWrap: true,
-                      itemBuilder: (context, int index) {
-                        if (index != portfolioImages.length) {
-                          return PortfolioCard(
-                            size: screenHeight * 0.3,
-                            context: context,
-                            myChild: Image.asset(
-                              portfolioImages[index],
-                              fit: BoxFit.fill,
-                            ),
-                          );
-                        } else {
-                          return MyViewMore(
-                            screenHeight: screenHeight,
-                            title: 'More this way',
-                          );
-                        }
-                      },
-                      itemCount: portfolioImages.length + 1,
+                    child: Container(
+                      height:screenHeight * 0.3,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        shrinkWrap: true,
+                        itemBuilder: (context, int index) {
+                          if (index != portfolioImages.length) {
+                            return PortfolioCard(
+                              size: screenHeight * 0.3,
+                              context: context,
+                              myChild: Image.asset(
+                                portfolioImages[index],
+                                fit: BoxFit.fill,
+                              ),
+                            );
+                          } else {
+                            return MyViewMore(
+                              screenHeight: screenHeight,
+                              title: 'More this way',
+                            );
+                          }
+                        },
+                        itemCount: portfolioImages.length + 1,
+                      ),
                     ),
                   ),
                   ButtonBar(
