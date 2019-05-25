@@ -16,116 +16,47 @@ class MobilePage extends StatelessWidget {
     screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: AppBar(
-                elevation: 0.5,
-                automaticallyImplyLeading: false,
-                title: Text(
-                  'The Protagonist',
-                  style: TextStyle(
-                    fontSize: 14.0,
-                  ),
-                ),
-              ),
-            ),
-            MyDrawerElement(
-              title: 'Portfolio',
-              context: context,
-            ),
-            MyDrawerElement(
-              title: 'Projects',
-              context: context,
-            ),
-            MyDrawerElement(
-              title: 'Shop',
-              context: context,
-            ),
-          ],
+        // drawer: Drawer(
+        //   child: ListView(
+        //     children: <Widget>[
+        //       Padding(
+        //         padding: const EdgeInsets.only(bottom: 8.0),
+        //         child: AppBar(
+        //           elevation: 0.5,
+        //           automaticallyImplyLeading: false,
+        //           title: Text(
+        //             'The Protagonist',
+        //             style: TextStyle(
+        //               fontSize: 14.0,
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //       MyDrawerElement(
+        //         title: 'Portfolio',
+        //         context: context,
+        //       ),
+        //       MyDrawerElement(
+        //         title: 'Projects',
+        //         context: context,
+        //       ),
+        //       MyDrawerElement(
+        //         title: 'Shop',
+        //         context: context,
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        body: Container(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Rotate your phone or view from laptop. Mobile Page under development', textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 24),
+          ),
         ),
       ),
-      body: Stack(
-        children: [
-          Image.asset(
-            'background_img.jpg',
-            width: screenWidth,
-            height: screenHeight,
-            alignment: Alignment.center,
-            fit: BoxFit.fill,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: screenWidth * 0.01,
-                right: screenWidth * 0.01,
-                top: screenHeight * 0.02),
-            child: CustomScrollView(
-              slivers: <Widget>[
-                SliverAppBar(
-                  floating: false,
-                  pinned: true,
-                  snap: false,
-                  elevation: 0.5,
-                  expandedHeight: screenHeight,
-                  flexibleSpace: FlexibleSpaceBar(
-                    title: Padding(
-                      padding: const EdgeInsets.only(top: 5.0),
-                      child: Text(
-                        'The Protagonist',
-                        style: TextStyle(
-                          //textBaseline: TextBaseline.alphabetic,
-                          fontFamily: 'Dollie Demo',
-                          fontSize: 14,
-                          //color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    background: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        Expanded(
-                          //height: screenHeight,
-                          child: Image.asset(
-                            'toolbar.jpeg',
-                            //height: screenHeight,
-                            width: screenWidth,
-                            //colorBlendMode: BlendMode.difference,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                    centerTitle: true,
-                  ),
-                ),
-                SliverFillRemaining(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: MyPage(
-                      context,
-                      color: Colors.orange[100],
-                      child: Row(
-                        children: <Widget>[
-                          Image.asset('main_page.jpeg'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                SliverFillRemaining(
-                  child: MyPage(
-                    context,
-                    color: Colors.red[100],
-                    child: Text('Page 2'),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
+    ));
   }
 }
