@@ -30,7 +30,7 @@ class MyPortfolio extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.only(bottom: 35.0, top: 45.0),
                     child: Center(
                         child: Text(
                       'Portfolio',
@@ -41,14 +41,14 @@ class MyPortfolio extends StatelessWidget {
                   ),
                   Flexible(
                     child: Container(
-                      height:screenHeight * 0.3,
+                      height:screenHeight * 0.4,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
                         itemBuilder: (context, int index) {
                           if (index != portfolioImages.length) {
                             return PortfolioCard(
-                              size: screenHeight * 0.3,
+                              size: screenHeight * 0.4,
                               context: context,
                               myChild: Image.asset(
                                 portfolioImages[index],
@@ -86,12 +86,6 @@ class MyPortfolio extends StatelessWidget {
                       )
                     ],
                   ),
-                  //Fills remaining space to prevent stretch
-                  // Expanded(
-                  //   child: Container(
-                  //     color: Colors.green,
-                  //   ),
-                  // )
                 ],
               ),
             ),
