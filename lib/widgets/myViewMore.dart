@@ -14,7 +14,7 @@ class MyViewMore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PortfolioCard(
-      size: screenHeight * 0.25,
+      size: screenHeight * 0.3,
       pad: false,
       myChild: InkWell(
         highlightColor: Colors.orangeAccent,
