@@ -16,14 +16,17 @@ class MySliverAppBar extends StatelessWidget {
     return SliverAppBar(
       actions: <Widget>[
         MyInkWell(
+          screenWidth: screenWidth,
           context: context,
           title: 'Portfolio',
         ),
         MyInkWell(
+          screenWidth: screenWidth,
           context: context,
           title: 'Projects',
         ),
         MyInkWell(
+          screenWidth: screenWidth,
           context: context,
           title: 'Shop',
         ),
