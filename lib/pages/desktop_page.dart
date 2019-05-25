@@ -3,15 +3,14 @@ import 'package:flutter_web/material.dart';
 import '../page-elements/home.dart';
 import '../page-elements/portfolio.dart';
 import '../page-elements/about_me.dart';
+import '../page-elements/projects.dart';
 //import '../widgets/myDrawerElements.dart';
 
 class DesktopPage extends StatelessWidget {
   final String title;
   final List<String> portfolioImages = [
     'main_page.jpeg',
-    'main_page.jpeg',
     'toolbar.jpeg',
-    'background_img.jpg',
     'background_img.jpg'
   ];
   DesktopPage({Key key, this.title}) : super(key: key);
@@ -42,13 +41,15 @@ class DesktopPage extends StatelessWidget {
             child: CustomScrollView(
               primary: true,
               slivers: <Widget>[
-                new MySliverAppBar(
+                MySliverAppBar(
                     screenHeight: screenHeight, screenWidth: screenWidth),
-                new MyAboutMe(screenHeight: screenHeight, screenWidth: screenWidth),
-                new MyPortfolio(
-                    screenWidth: screenWidth,
-                    screenHeight: screenHeight,
-                    portfolioImages: portfolioImages),
+                MyAboutMe(screenHeight: screenHeight, screenWidth: screenWidth),
+                MyPortfolio(
+                  screenWidth: screenWidth,
+                  screenHeight: screenHeight,
+                  portfolioImages: portfolioImages,
+                ),
+                MyProject(screenHeight: screenHeight, screenWidth: screenWidth),
               ],
             ),
           ),
