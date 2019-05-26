@@ -38,19 +38,23 @@ class DesktopPage extends StatelessWidget {
                 left: screenWidth * 0.10,
                 right: screenWidth * 0.10,
                 top: screenHeight * 0.03),
-            child: CustomScrollView(
-              primary: true,
-              slivers: <Widget>[
-                MySliverAppBar(
-                    screenHeight: screenHeight, screenWidth: screenWidth),
-                MyAboutMe(screenHeight: screenHeight, screenWidth: screenWidth),
-                MyPortfolio(
-                  screenWidth: screenWidth,
-                  screenHeight: screenHeight,
-                  portfolioImages: portfolioImages,
-                ),
-                MyProject(screenHeight: screenHeight, screenWidth: screenWidth),
-              ],
+            child: Scrollbar(
+              child: CustomScrollView(
+                primary: true,
+                slivers: <Widget>[
+                  MySliverAppBar(
+                      screenHeight: screenHeight, screenWidth: screenWidth),
+                  MyAboutMe(
+                      screenHeight: screenHeight, screenWidth: screenWidth),
+                  MyPortfolio(
+                    screenWidth: screenWidth,
+                    screenHeight: screenHeight,
+                    portfolioImages: portfolioImages,
+                  ),
+                  MyProject(
+                      screenHeight: screenHeight, screenWidth: screenWidth),
+                ],
+              ),
             ),
           ),
         ],
