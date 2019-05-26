@@ -14,5 +14,37 @@
                 "asset": "fonts/Dollie-Demo.ttf"
             }
         ]
+    },
+    {
+        "family": "ArchitectsDaughter-Regular",
+        "fonts": [
+            {
+                "asset": "fonts/ArchitectsDaughter-Regular.ttf"
+            }
+        ]
+    },
+    {
+        "family": "IndieFlower",
+        "fonts": [
+            {
+                "asset": "fonts/IndieFlower.ttf"
+            }
+        ]
+    },
+    {
+        "family": "ShadowsIntoLightTwo",
+        "fonts": [
+            {
+                "asset": "fonts/ShadowsIntoLightTwo-Regular.ttf"
+            }
+        ]
+    },
+    {
+        "family": "Neucha",
+        "fonts": [
+            {
+                "asset": "fonts/Neucha.ttf"
+            }
+        ]
     }
 ]

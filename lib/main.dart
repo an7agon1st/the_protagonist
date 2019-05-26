@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    String _font_family = 'Neucha';
     return MaterialApp(
       title: 'The Protagonist',
       theme: ThemeData(
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.orange[100],
         backgroundColor: Colors.orange[100],
         //scaffoldBackgroundColor: Colors.blue,
-        fontFamily: 'Dollie Demo',
+        fontFamily: _font_family,
         primaryColor: Color(0xFFFFE0b2),
         textTheme: TextTheme(
           title: TextStyle(
-            fontFamily: 'Dollie Demo',
+            fontSize: 24,
+            fontFamily: _font_family,
             color: Colors.grey,
           ),
         ),
@@ -42,6 +44,6 @@ class MyHomePage extends StatelessWidget {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
 
-    return screenHeight>screenWidth? MobilePage():DesktopPage();
+    return screenHeight > screenWidth ? MobilePage() : DesktopPage();
   }
 }
