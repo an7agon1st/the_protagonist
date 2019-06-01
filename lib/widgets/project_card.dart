@@ -1,5 +1,7 @@
 import 'package:flutter_web/material.dart';
 
+import '../pages/portfolio_page.dart';
+
 class MyProjectCard extends StatelessWidget {
   MyProjectCard(
       {this.screenHeight, this.screenWidth, this.title, this.myChild});
@@ -15,12 +17,18 @@ class MyProjectCard extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Container(
         height: screenHeight * 0.5,
-      //  width: screenHeight * 0.5,
+        //  width: screenHeight * 0.5,
         child: Card(
-        color: Colors.deepOrangeAccent[100],
-
+          color: Colors.deepOrangeAccent[100],
           child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                PageRouteBuilder(pageBuilder: (context, w, s) {
+                  return PortfolioPage();
+                }),
+              );
+            },
             child: Column(
               children: <Widget>[
                 Padding(
