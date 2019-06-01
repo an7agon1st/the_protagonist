@@ -41,18 +41,39 @@ class MyPortfolio extends StatelessWidget {
                   ),
                   Flexible(
                     child: Container(
-                      height:screenHeight * 0.4,
+                      height: screenHeight * 0.4,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
                         itemBuilder: (context, int index) {
                           if (index != portfolioImages.length) {
-                            return PortfolioCard(
-                              size: screenHeight * 0.4,
-                              context: context,
-                              myChild: Image.asset(
-                                portfolioImages[index],
-                                fit: BoxFit.fill,
+                            return InkWell(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return SimpleDialog(
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: EdgeInsets.all(
+                                              screenHeight * 0.1),
+                                          child: Image.asset(
+                                            portfolioImages[index],
+                                            fit: BoxFit.scaleDown,
+                                          ),
+                                        )
+                                      ],
+                                    );
+                                  },
+                                );
+                              },
+                              child: PortfolioCard(
+                                size: screenHeight * 0.4,
+                                context: context,
+                                myChild: Image.asset(
+                                  portfolioImages[index],
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                             );
                           } else {
