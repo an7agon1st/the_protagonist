@@ -1,9 +1,6 @@
 import 'package:flutter_web/material.dart';
 
-//import '../widgets/myInkWell.dart';
-import '../widgets/myPages.dart';
-import '../widgets/myDrawerElements.dart';
-import '../page-elements/home.dart';
+import '../widgets/myDrawer.dart';
 import '../page-elements/portfolio.dart';
 import '../page-elements/about_me.dart';
 import '../page-elements/projects.dart';
@@ -26,37 +23,7 @@ class MobilePage extends StatelessWidget {
     ];
 
     return Scaffold(
-        drawer: Drawer(
-          child: ListView(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
-                child: AppBar(
-                  elevation: 0.5,
-                  automaticallyImplyLeading: false,
-                  title: Text(
-                    'The Protagonist',
-                    style: TextStyle(
-                      fontSize: 14.0,
-                    ),
-                  ),
-                ),
-              ),
-              MyDrawerElement(
-                title: 'Portfolio',
-                context: context,
-              ),
-              MyDrawerElement(
-                title: 'Projects',
-                context: context,
-              ),
-              MyDrawerElement(
-                title: 'Shop',
-                context: context,
-              ),
-            ],
-          ),
-        ),
+        drawer: MyDrawer(isHome: true,),
         body: Scrollbar(
           child: CustomScrollView(
             slivers: <Widget>[

@@ -7,10 +7,12 @@ class MyAppBar extends AppBar {
   MyAppBar({
     Key key,
     @required this.screenWidth,
+    @required this.screenHeight,
     @required this.context,
   }) : super(
           elevation: 0.5,
-          actions: <Widget>[
+          
+          actions:screenHeight<screenWidth? <Widget>[
             MyInkWell(
               screenWidth: screenWidth,
               context: context,
@@ -26,7 +28,7 @@ class MyAppBar extends AppBar {
               context: context,
               title: 'Shop',
             ),
-          ],
+          ]:null,
           centerTitle: true,
           title: Padding(
             padding: const EdgeInsets.only(top: 5.0),
@@ -44,4 +46,5 @@ class MyAppBar extends AppBar {
 
   final double screenWidth;
   final BuildContext context;
+  final double screenHeight;
 }
