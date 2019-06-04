@@ -9074,8 +9074,8 @@ p_:function p_(a){this.a=a
 this.b=null
 this.c=!1},
 rQ:function rQ(){},
-lE:function(a,b,c){var u=null,t=b>900?100:u
-return new O.Ao(M.bT(u,new T.dr(C.A,u,u,L.cF(c,b<900?A.c0(u,u,u,u,u,u,u,u,u,11,u,u,u,u,!0,u,u,u,u,u,u):u),u),u,u,u,u,u,new V.ad(8,8,8,8),t),new O.Ap(),u,u,u,u,u,!0,C.L,u,u,u,C.am.j(0,50),C.am.j(0,50),u,!0,!1,u)},
+lE:function(a,b,c,d){var u=null,t=c>900?100:u
+return new O.Ao(M.bT(u,new T.dr(C.A,u,u,L.cF(d,c<900?A.c0(u,u,u,u,u,u,u,u,u,11,u,u,u,u,!0,u,u,u,u,u,u):u),u),u,u,u,u,u,new V.ad(8,8,8,8),t),new O.Ap(b),u,u,u,u,u,!0,C.L,u,u,u,C.am.j(0,50),C.am.j(0,50),u,!0,!1,u)},
 Ao:function Ao(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r){var _=this
 _.c=a
 _.d=b
@@ -9095,7 +9095,7 @@ _.dy=o
 _.fr=p
 _.fx=q
 _.a=r},
-Ap:function Ap(){},
+Ap:function Ap(a){this.a=a},
 NT:function(a,b,c,d){var u=null
 return new O.Cg(d,C.ad,M.bT(u,V.KS(c?new T.aF(C.ad,b,u):b,u),u,u,u,d,u,u,d),u)},
 Cg:function Cg(a,b,c,d){var _=this
@@ -39073,7 +39073,7 @@ $C:"$2",
 $R:2,
 $S:201}
 Y.Ax.prototype={
-H:function(a){var u=null,t=this.d,s=[N.a_],r=H.h([O.lE(a,t,"Portfolio"),O.lE(a,t,"Projects"),O.lE(a,t,"Shop")],s),q=L.cF("The Protagonist",A.c0(u,u,u,u,u,u,u,"Dollie Demo",u,14,u,u,u,u,!0,u,u,u,u,u,u)),p=Q.MS(239,239,239,1)
+H:function(a){var u=null,t=this.d,s=[N.a_],r=H.h([O.lE(a,u,t,"Portfolio"),O.lE(a,u,t,"Projects"),O.lE(a,"https://otheprotagonisto.bigcartel.com",t,"Shop")],s),q=L.cF("The Protagonist",A.c0(u,u,u,u,u,u,u,"Dollie Demo",u,14,u,u,u,u,!0,u,u,u,u,u,u)),p=Q.MS(239,239,239,1)
 return E.Oe(r,0.5,this.c,Z.Na(T.eT(H.h([T.xq(M.bT(u,U.j2("toolbar.jpeg",C.A,C.c4,C.c6,u,u,t),p,u,u,u,u,u,u))],s),C.P,C.Y,C.S),!0,new T.aF(C.ck,q,u)),!1,!0,!1)}}
 S.Aq.prototype={
 H:function(a){var u,t,s,r,q,p=null,o=this.d
@@ -39139,7 +39139,7 @@ if(typeof o!=="number")return H.b(o)
 if(n>o){u=n*0.1
 u=new V.ad(u,o*0.03,u,0)}else u=new V.ad(0,0,0,0)
 t=n<o?new E.pB(!1,q):q
-s=o<n?H.h([O.lE(a,n,p),O.lE(a,n,"Projects"),O.lE(a,n,"Shop")],[N.a_]):q
+s=o<n?H.h([O.lE(a,q,n,p),O.lE(a,q,n,"Projects"),O.lE(a,q,n,"Shop")],[N.a_]):q
 r=L.cF("The Protagonist",A.c0(q,q,q,q,q,q,q,"Dollie Demo",q,14,q,q,q,q,!0,q,q,q,q,q,q))
 return new T.aF(u,M.Lt(new U.Ai(q,!0,new T.aF(C.ck,r,q),s,q,q,0.5,q,q,q,q,!0,!0,16,1,1,new Q.X(1/0,56),q),T.eT(H.h([new T.dr(C.A,q,q,new T.aF(C.iZ,L.cF(p,A.c0(q,q,q,q,q,q,q,q,q,32,q,q,q,q,!0,q,q,q,q,q,q)),q),q)],[N.a_]),C.P,C.Y,C.S),t),q)}}
 U.Ai.prototype={}
@@ -39166,7 +39166,8 @@ $R:3,
 $S:74}
 O.Ao.prototype={}
 O.Ap.prototype={
-$0:function(){},
+$0:function(){var u=this.a
+if(u!=null)window.location.assign(u)},
 $S:0}
 X.Ay.prototype={
 H:function(a){var u,t=null,s=this.c
