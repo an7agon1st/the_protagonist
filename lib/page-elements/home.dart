@@ -28,7 +28,7 @@ class MySliverAppBar extends StatelessWidget {
         MyInkWell(
           screenWidth: screenWidth,
           context: context,
-          title: 'Shop',
+          title: 'Products',
           link: 'https://otheprotagonisto.bigcartel.com',
         ),
         // IconButton(

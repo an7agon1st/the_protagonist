@@ -53,6 +53,31 @@ class DesktopPage extends StatelessWidget {
                   ),
                   MyProject(
                       screenHeight: screenHeight, screenWidth: screenWidth),
+                  SliverToBoxAdapter(
+                    child: Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: InkWell(
+                              child: Text('Contact Me'),
+                              onTap: () {},
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: InkWell(
+                              onTap: () {},
+                              child: Text('Product'),
+                            ),
+                          ),
+                        ],
+                      ),
+                      height: screenHeight * 0.1,
+                      color: Color.fromRGBO(210, 210, 210, 1.0),
+                    ),
+                  )
                 ],
               ),
             ),
