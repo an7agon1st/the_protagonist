@@ -29,6 +29,7 @@ class MySliverAppBar extends StatelessWidget {
           screenWidth: screenWidth,
           context: context,
           title: 'Shop',
+          link: 'https://otheprotagonisto.bigcartel.com',
         ),
         // IconButton(
         //   iconSize: 30,
