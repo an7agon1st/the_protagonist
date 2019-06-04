@@ -63,7 +63,7 @@ class MySliverAppBar extends StatelessWidget {
               child: Container(
                 color: Color.fromRGBO(239, 239, 239, 1.0),
                 child: Image.asset(
-                  'toolbar.jpeg',
+                  'toolbar.jpg',
                   colorBlendMode: BlendMode.lighten,
                   //height: screenHeight,
                   width: screenWidth,

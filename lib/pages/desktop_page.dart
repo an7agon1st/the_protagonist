@@ -1,6 +1,6 @@
 import 'package:flutter_web/material.dart';
 
-import '../page-elements/home.dart';
+import '../page-elements/mySliverAppbar.dart';
 import '../page-elements/portfolio.dart';
 import '../page-elements/about_me.dart';
 import '../page-elements/projects.dart';
@@ -61,21 +61,25 @@ class DesktopPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(18.0),
                             child: InkWell(
+                              splashColor: Colors.grey,
                               child: Text('Contact Me'),
                               onTap: () {},
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(18.0),
-                            child: InkWell(
-                              onTap: () {},
-                              child: Text('Product'),
+                            child: Container(
+                              child: InkWell(
+                                splashColor: Colors.grey,
+                                onTap: () {},
+                                child: Text('Product'),
+                              ),
                             ),
                           ),
                         ],
                       ),
                       height: screenHeight * 0.1,
-                      color: Color.fromRGBO(210, 210, 210, 1.0),
+                      color: Color.fromRGBO(240, 240, 240, 1.0),
                     ),
                   )
                 ],
