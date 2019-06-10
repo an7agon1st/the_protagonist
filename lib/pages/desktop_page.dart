@@ -56,29 +56,38 @@ class DesktopPage extends StatelessWidget {
                   SliverToBoxAdapter(
                     child: Container(
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.all(18.0),
+                            padding: const EdgeInsets.only(
+                                top: 50, left: 70, right: 25.0),
                             child: InkWell(
                               splashColor: Colors.grey,
-                              child: Text('Contact Me'),
+                              child: Text(
+                                'Contact Me',
+                                style: TextStyle(fontSize: 20),
+                              ),
                               onTap: () {},
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(18.0),
+                            padding: const EdgeInsets.only(
+                                top: 50, left: 50, right: 25.0),
                             child: Container(
                               child: InkWell(
                                 splashColor: Colors.grey,
                                 onTap: () {},
-                                child: Text('Product'),
+                                child: Text(
+                                  'Product',
+                                  style: TextStyle(fontSize: 20),
+                                ),
                               ),
                             ),
                           ),
                         ],
                       ),
-                      height: screenHeight * 0.1,
+                      height: screenHeight * 0.30,
                       color: Color.fromRGBO(240, 240, 240, 1.0),
                     ),
                   )

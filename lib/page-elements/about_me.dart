@@ -12,46 +12,49 @@ class MyAboutMe extends StatelessWidget {
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (context, int index) {
-          return Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              height: screenHeight * 0.9,
-              width: screenWidth,
-              color: Colors.white,
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: Center(
-                      child: Image.asset(
-                        'main_page.jpeg',
-                        scale: 7.0,
+          return Container(
+            color: Color.fromRGBO(251, 138, 26, 1.0),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal:1.5, vertical: 0.75),
+              child: Container(
+                height: screenHeight * 0.9,
+                width: screenWidth,
+                color: Colors.white,
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Center(
+                        child: Image.asset(
+                          'main_page.jpeg',
+                          scale: 7.0,
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'Shit About me\nMore Shit\nCause I Dont Shut Up \n follow my instagram tho \n www.instagram.com/o_the_protagonist_o',
-                          style: TextStyle(
-                            fontSize: 12.0,
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'Shit About me\nMore Shit\nCause I Dont Shut Up \n follow my instagram tho \n www.instagram.com/o_the_protagonist_o',
+                            style: TextStyle(
+                              fontSize: 12.0,
+                            ),
                           ),
-                        ),
-                        // OutlineButton(
-                        //   highlightedBorderColor: Colors.orange,
-                        //     onPressed: () {
-                        //       //launch('instagram.com')
-                        //     },
-                        //     child: Image.asset(
-                        //       'instagram.png',
-                        //       scale: 12,
-                        //     )),
-                      ],
+                          // OutlineButton(
+                          //   highlightedBorderColor: Colors.orange,
+                          //     onPressed: () {
+                          //       //launch('instagram.com')
+                          //     },
+                          //     child: Image.asset(
+                          //       'instagram.png',
+                          //       scale: 12,
+                          //     )),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );
