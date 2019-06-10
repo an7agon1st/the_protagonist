@@ -88,7 +88,7 @@ class DesktopPage extends StatelessWidget {
                         ],
                       ),
                       height: screenHeight * 0.30,
-                      color: Color.fromRGBO(240, 240, 240, 1.0),
+                      color: Colors.white,
                     ),
                   )
                 ],

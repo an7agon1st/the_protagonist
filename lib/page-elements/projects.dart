@@ -19,7 +19,7 @@ class MyProject extends StatelessWidget {
             padding:
                 const EdgeInsets.symmetric(vertical: 0.75, horizontal: 1.5),
             child: Container(
-              color: Colors.yellow[200],
+              color: Colors.white,
               height: screenHeight * 0.9,
               width: screenWidth,
               child: Column(
