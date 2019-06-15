@@ -14,6 +14,7 @@ class MySliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      // backgroundColor: Color.fromRGBO(251, 138, 26, 1.0),
       actions: <Widget>[
         MyInkWell(
           screenWidth: screenWidth,
@@ -41,7 +42,7 @@ class MySliverAppBar extends StatelessWidget {
       pinned: true,
       snap: false,
       elevation: 0.5,
-      expandedHeight: screenHeight,
+      expandedHeight: screenHeight*0.65,
       flexibleSpace: FlexibleSpaceBar(
         title: Padding(
           padding: const EdgeInsets.only(top: 5.0),
@@ -55,24 +56,30 @@ class MySliverAppBar extends StatelessWidget {
             ),
           ),
         ),
-        background: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            Expanded(
-              //height: screenHeight,
-              child: Container(
-                color: Color.fromRGBO(239, 239, 239, 1.0),
-                child: Image.asset(
-                  'toolbar.jpg',
-                  colorBlendMode: BlendMode.lighten,
+        background: Container(
+          color: Color.fromRGBO(251, 138, 26, 1.0),
+          child: Padding(
+            padding: const EdgeInsets.all(1.5),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Expanded(
                   //height: screenHeight,
-                  width: screenWidth,
-                  //colorBlendMode: BlendMode.difference,
-                  fit: BoxFit.fitWidth,
+                  child: Container(
+                    color: Color.fromRGBO(239, 239, 239, 1.0),
+                    child: Image.asset(
+                      'toolbar_trial.jpg',
+                      colorBlendMode: BlendMode.lighten,
+                      //height: screenHeight,
+                      width: screenWidth,
+                      //colorBlendMode: BlendMode.difference,
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
         centerTitle: true,
       ),

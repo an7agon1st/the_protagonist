@@ -14,44 +14,51 @@ class MyProject extends StatelessWidget {
     return SliverList(
       delegate: SliverChildListDelegate([
         Container(
-          color: Colors.yellow[200],
-          height: screenHeight * 0.9,
-          width: screenWidth,
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 40.0,
-                  bottom: 21.0,
-                ),
-                child: Text(
-                  'Projects',
-                  style: TextStyle(fontSize: 36.0),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left:25.0, right: 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      child: MyProjectCard(
-                        screenHeight: screenHeight,
-                        screenWidth: screenWidth,
-                        title: 'Proto',
-                      ),
+          color: Color.fromRGBO(251, 138, 26, 1.0),
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 0.75, horizontal: 1.5),
+            child: Container(
+              color: Colors.yellow[200],
+              height: screenHeight * 0.9,
+              width: screenWidth,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 40.0,
+                      bottom: 21.0,
                     ),
-                    Expanded(
-                      child: MyProjectCard(
-                        screenHeight: screenHeight,
-                        screenWidth: screenWidth,
-                        title: 'Projects',
-                      ),
+                    child: Text(
+                      'Projects',
+                      style: TextStyle(fontSize: 36.0),
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25.0, right: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Expanded(
+                          child: MyProjectCard(
+                            screenHeight: screenHeight,
+                            screenWidth: screenWidth,
+                            title: 'Proto',
+                          ),
+                        ),
+                        Expanded(
+                          child: MyProjectCard(
+                            screenHeight: screenHeight,
+                            screenWidth: screenWidth,
+                            title: 'Projects',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ]),
