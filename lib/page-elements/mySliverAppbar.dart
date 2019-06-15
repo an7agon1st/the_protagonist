@@ -44,29 +44,9 @@ class MySliverAppBar extends StatelessWidget {
       elevation: 0.5,
       expandedHeight: screenHeight * 0.65,
       flexibleSpace: FlexibleSpaceBar(
-        title: Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              MyInkWell(
-                screenWidth: screenWidth,
-                context: context,
-                title: 'Portfolio',
-              ),
-              MyInkWell(
-                screenWidth: screenWidth,
-                context: context,
-                title: 'Projects',
-              ),
-              MyInkWell(
-                screenWidth: screenWidth,
-                context: context,
-                title: 'Products',
-                link: 'https://otheprotagonisto.bigcartel.com',
-              ),
-            ],
-          ),
+        title: Text(
+          'The Protagonist',
+          style: TextStyle(fontFamily: 'Dollie Demo', fontSize: 12),
         ),
         background: Container(
           color: Color.fromRGBO(251, 138, 26, 1.0),
