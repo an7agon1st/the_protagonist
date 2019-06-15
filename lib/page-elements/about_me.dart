@@ -15,7 +15,7 @@ class MyAboutMe extends StatelessWidget {
           return Container(
             color: Color.fromRGBO(251, 138, 26, 1.0),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal:1.5, vertical: 0.75),
+              padding: const EdgeInsets.symmetric(horizontal:1.5, vertical: 0),
               child: Container(
                 height: screenHeight * 0.9,
                 width: screenWidth,

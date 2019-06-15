@@ -19,7 +19,7 @@ class MyProjectCard extends StatelessWidget {
         height: screenHeight * 0.5,
         //  width: screenHeight * 0.5,
         child: Card(
-          color: Colors.deepOrangeAccent[100],
+          color: Colors.grey,
           child: InkWell(
             onTap: () {
               Navigator.push(

@@ -28,7 +28,11 @@ class MyPortfolio extends StatelessWidget {
               child: Container(
                 width: screenWidth,
                 height: screenHeight * 0.9,
+<<<<<<< HEAD
                 color: Colors.orange[50],
+=======
+                color: Colors.white,
+>>>>>>> 4735e047e24a0e7b484d4f820230e7d16f7ca913
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
